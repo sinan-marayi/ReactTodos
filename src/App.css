@@ -25,10 +25,13 @@ body {
 }
 .btn-add {
   background-color: rgba(20, 20, 187, 0.438);
+  width: max-content;
+  font-family: monospace;
 }
 .list-area {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+
 }
 .progressing {
   min-height: 50vh;
@@ -71,4 +74,10 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 9px;
   min-width: 20vw; 
+}
+.heading-com{
+  text-align: center;
+}
+.list-items{
+  font-size: larger;
 }

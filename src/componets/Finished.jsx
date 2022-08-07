@@ -1,4 +1,7 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
+
 
 function Finished({ todoList, finish }) {
     const list = todoList.map((listItem, index) => {
@@ -7,19 +10,9 @@ function Finished({ todoList, finish }) {
           <tbody>
             <tr className="todoItems">
               <td>
-                <li>{listItem.todoItem}</li>
-              </td>
-              <td>
-                <button className="btn-green" onClick={() => finish(listItem.id)}>
-                  Finish
-                </button>
-              </td>
-              <td>
-                <button className="btn-red">delete</button>
-              </td>
-              <td>
-                <button className="btn-gray">Add to later</button>
-              </td>
+                <li className='list-items'>{listItem.todoItem} <FontAwesomeIcon icon={faCircleCheck} /> </li>
+                             
+                </td>
             </tr>
           </tbody>
         </table>
@@ -27,8 +20,8 @@ function Finished({ todoList, finish }) {
     });
   
     return (
-      <div className="finished">
-        <h2>Progressing Todos</h2>
+      <div className="finished"> 
+        <h2 className='heading-com'>Completed  Todos</h2>
         {list}
       </div>
     );

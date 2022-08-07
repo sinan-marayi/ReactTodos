@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Finished from "./componets/Finished";
 import Progress from "./componets/Progress";
 
 function Todo() {
@@ -14,7 +15,7 @@ function Todo() {
   const finish=(id)=>{
     setTodoList(prevList =>{
         return prevList.map(item =>{
-            return item.id === id ? {...item,status:'finish'} : item
+            return item.id === id ? {...item,status:'finished'} : item
         })
     })
   }
@@ -29,12 +30,12 @@ function Todo() {
             type="text"
           />
           <button className="btn btn-add" onClick={addTodo}>
-            Add
+            Add To Progress
           </button>
         </div>
       </div>
       <div className="list-area">
-        
+        <Finished todoList={todoList.filter(obj => obj.status==='finished')} />
         <Progress todoList={todoList.filter(obj => obj.status==='progress')} finish={finish} />
       </div>
     </>

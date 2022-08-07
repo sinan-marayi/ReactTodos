@@ -1,22 +1,22 @@
 import React from "react";
 
-function Progress({ todoList, finish }) {
+function Progress({ todoList, finish,deleted }) {
   const list = todoList.map((listItem, index) => {
     return (
       <table key={index}>
         <tbody>
           <tr className="todoItems">
             <td>
-              <li>{listItem.todoItem}</li>
+              <li className='list-items'>{listItem.todoItem}</li>
             </td>
             <td>
               <button className="btn-green" onClick={() => finish(listItem.id)}>
-                Finish
+                Finished
               </button>
             </td>
             <td>
-              <button className="btn-red">delete</button>
-            </td>
+              <button className="btn-red" onClick={()=>deleted(listItem.id)}>delete</button>
+            </td> 
             <td>
               <button className="btn-gray">Add to later</button>
             </td>
