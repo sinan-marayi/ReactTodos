@@ -1,5 +1,5 @@
 body {
-  background-color: thistle;
+  background-color: rgba(204, 151, 6, 0.349);
 }
 .todos-section {
   font-family: serif;
@@ -34,12 +34,13 @@ body {
 
 }
 .progressing {
-  min-height: 50vh;
+  max-height: 50vh;
   border: 1px black solid;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 9px;
   min-width: 30vw;
+  overflow-y:auto ;
 }
 .progressing h2{
   text-align: center;
@@ -67,6 +68,9 @@ body {
 .btn-gray{
   background-color:rgba(128, 128, 128, 0.384);
 }
+.btn-yellow{
+  background-color:rgba(58, 6, 245, 0.384);
+}
 .finished{
   min-height: 50vh;
   border: 1px black solid;
@@ -74,6 +78,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 9px;
   min-width: 20vw; 
+  overflow-y:auto ;
 }
 .heading-com{
   text-align: center;

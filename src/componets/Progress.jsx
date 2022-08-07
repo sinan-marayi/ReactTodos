@@ -1,6 +1,6 @@
 import React from "react";
 
-function Progress({ todoList, finish,deleted }) {
+function Progress({ todoList, finish,deleted,addToLater }) {
   const list = todoList.map((listItem, index) => {
     return (
       <table key={index}>
@@ -18,7 +18,7 @@ function Progress({ todoList, finish,deleted }) {
               <button className="btn-red" onClick={()=>deleted(listItem.id)}>delete</button>
             </td> 
             <td>
-              <button className="btn-gray">Add to later</button>
+              <button className="btn-gray" onClick={()=>addToLater(listItem.id)}>Add to later</button>
             </td>
           </tr>
         </tbody>
