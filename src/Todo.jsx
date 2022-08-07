@@ -19,6 +19,11 @@ function Todo() {
         })
     })
   }
+  const deleted=(id)=>{
+    setTodoList(prevList => {
+        return prevList.filter(obj => obj.id !== id )
+    })
+  }
   console.log(todoList);
   return (
     <>
@@ -36,7 +41,7 @@ function Todo() {
       </div>
       <div className="list-area">
         <Finished todoList={todoList.filter(obj => obj.status==='finished')} />
-        <Progress todoList={todoList.filter(obj => obj.status==='progress')} finish={finish} />
+        <Progress todoList={todoList.filter(obj => obj.status==='progress')} finish={finish} deleted={deleted}/>
       </div>
     </>
   );
