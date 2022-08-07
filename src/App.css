@@ -1,28 +1,74 @@
-body{
+body {
   background-color: thistle;
 }
-.todos-section{
+.todos-section {
   font-family: serif;
   display: flex;
   justify-content: center;
 }
-.input-main{
+.input-main {
   display: flex;
   gap: 10px;
   padding-top: 30px;
 }
-.input-sec{
+.input-sec {
   padding: 10px;
   border-radius: 5px;
   border: none;
-  width:500px
+  width: 500px;
 }
-.btn{
+.btn {
   border: none;
   border-radius: 5px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   width: 100px;
 }
-.btn-add{
+.btn-add {
   background-color: rgba(20, 20, 187, 0.438);
+}
+.list-area {
+  display: flex;
+  justify-content: center;
+}
+.progressing {
+  min-height: 50vh;
+  border: 1px black solid;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 9px;
+  min-width: 30vw;
+}
+.progressing h2{
+  text-align: center;
+}
+.list-area {
+  padding: 40px;
+}
+.todoItems{
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+  padding-top: 3px
+}
+.todoItems button{
+  border: none;
+  border-radius: 8px;
+  padding:5px;
+}
+.btn-green{
+  background-color: rgba(0, 128, 0, 0.349);
+}
+.btn-red{
+  background-color: rgba(255, 0, 0, 0.39);
+}
+.btn-gray{
+  background-color:rgba(128, 128, 128, 0.384);
+}
+.finished{
+  min-height: 50vh;
+  border: 1px black solid;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 9px;
+  min-width: 20vw; 
 }
